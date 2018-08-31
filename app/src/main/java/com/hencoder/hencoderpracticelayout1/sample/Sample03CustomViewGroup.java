@@ -52,15 +52,24 @@ public class Sample03CustomViewGroup extends ViewGroup {
     mChildBottoms = new int[childCount];
   }
 
+  //1.根据自己的LayoutParams属性获取MeasureSpec
+  //2.测量各个子view的宽高和位置并保存，测量自己的宽高
+  //3.重写onLayout，调用保存的位置信息，给每个子view摆放位置
+
+  //基本流程如下
+  //测量所有的子View
+//    measureChildren(widthMeasureSpec, heightMeasureSpec);
+//    //测量自己的宽高
+//    int width = measureWidth(widthMeasureSpec);
+//    int height = measureHeight(heightMeasureSpec);
+//
+//    setMeasuredDimension(width, height);
   @Override
   protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
     super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     System.out.println("Sample03CustomViewGroup.onMeasure");
 
 
-    //1.根据自己的LayoutParams属性获取MeasureSpec
-    //2.测量各个子view的宽高和位置并保存，测量自己的宽高
-    //3.重写onLayout，调用保存的位置信息，给每个子view摆放位置
     int selfWidthSpecMode = MeasureSpec.getMode(widthMeasureSpec);
     int selfWidthSpecSize = MeasureSpec.getSize(widthMeasureSpec);
 
