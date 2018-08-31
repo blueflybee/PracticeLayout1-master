@@ -88,6 +88,9 @@ public class Sample03CustomViewGroup extends ViewGroup {
     System.out.println("selfHeightSpecSize = " + selfHeightSpecSize);
 
 
+    //ViewGroup自身的LayoutParams，
+    // 在无上层layout的时候，不管布局中如何设定layout_width，总是MATCH_PARENT，
+    // 在有上层layout的时候才可以在布局文件设定对应的layout_width属性
     LayoutParams selfLp = getLayoutParams();
     System.out.println("selfLp.width = " + selfLp.width);
 
