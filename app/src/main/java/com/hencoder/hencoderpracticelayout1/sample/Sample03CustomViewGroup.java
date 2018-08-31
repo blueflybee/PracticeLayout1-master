@@ -2,7 +2,6 @@ package com.hencoder.hencoderpracticelayout1.sample;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Rect;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
@@ -58,6 +57,9 @@ public class Sample03CustomViewGroup extends ViewGroup {
     System.out.println("Sample03CustomViewGroup.onMeasure");
 
 
+    //1.根据自己的LayoutParams属性获取MeasureSpec
+    //2.测量各个子view的宽高和位置并保存，测量自己的宽高
+    //3.重写onLayout，调用保存的位置信息，给每个子view摆放位置
     int selfWidthSpecMode = MeasureSpec.getMode(widthMeasureSpec);
     int selfWidthSpecSize = MeasureSpec.getSize(widthMeasureSpec);
 
@@ -212,8 +214,7 @@ public class Sample03CustomViewGroup extends ViewGroup {
   protected void onLayout(boolean changed, int l, int t, int r, int b) {
     System.out.println("Sample03CustomViewGroup.onLayout");
     for (int i = 0; i < getChildCount(); i++) {
-      View view = getChildAt(i);
-      view.layout(mChildLefts[i], mChildTops[i], mChildRights[i], mChildBottoms[i]);
+      getChildAt(i).layout(mChildLefts[i], mChildTops[i], mChildRights[i], mChildBottoms[i]);
     }
 
   }
