@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 
 public class Sample03CustomViewGroup extends ViewGroup {
@@ -85,6 +86,11 @@ public class Sample03CustomViewGroup extends ViewGroup {
     }
 
     System.out.println("selfHeightSpecSize = " + selfHeightSpecSize);
+
+
+    LayoutParams selfLp = getLayoutParams();
+    System.out.println("selfLp.width = " + selfLp.width);
+
     int usedWidth = 0;
     int usedHeight = 0;
     int maxHeight = 0;

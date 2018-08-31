@@ -1,39 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.hencoder.hencoderpracticelayout1.sample.Sample03CustomViewGroup
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@android:color/holo_green_light">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
 
-    <TextView
+    <com.hencoder.hencoderpracticelayout1.sample.Sample03CustomViewGroup
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="标签1"/>
+        android:background="@android:color/holo_green_light">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="我是标签2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="标签1"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="自定义ViewGroup布局"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我是标签2"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="白日依山尽，黄河入海流！！"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自定义ViewGroup布局"/>
 
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:singleLine="true"-->
-    <!--android:text="你好！！！！！！！！！！！！！！！"/>-->
-    <!--<TextView-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:singleLine="true"-->
-    <!--android:text="你好！！！！！！！！！！！！！！！"/>-->
-</com.hencoder.hencoderpracticelayout1.sample.Sample03CustomViewGroup>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="白日依山尽，黄河入海流！！"/>
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:singleLine="true"-->
+        <!--android:text="你好！！！！！！！！！！！！！！！"/>-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:singleLine="true"-->
+        <!--android:text="你好！！！！！！！！！！！！！！！"/>-->
+    </com.hencoder.hencoderpracticelayout1.sample.Sample03CustomViewGroup>
+
+</LinearLayout>
